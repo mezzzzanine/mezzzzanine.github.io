@@ -1,0 +1,489 @@
+/* ————————————————— Variables ——————————————— */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('/static/fonts/Bookerly.ttf') format('truetype'), 
+  url('/static/fonts/Bookerly\ Italic.ttf') format('truetype');
+}
+
+:root{
+  --background-color: #000000;
+
+  --text-primary: #ffffff;
+  --text-secondary: #636363;
+
+  --border-gray: #2A2A2A;
+
+  --active-link: #5CACFF;
+  --active-link-underline: rgba(88, 150, 255, 40%);
+  --hover-link: #FF5C5C;
+}
+
+/* ————————————————— Zeroing ——————————————— */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+  
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+  
+body {
+  line-height: 1;
+}
+  
+ol, ul {
+  list-style: none;
+}
+  
+blockquote, q {
+  quotes: none;
+}
+  
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+  
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* —————————————————— General ——————————————— */
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 80px;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.content {
+  width: 1200px;
+  min-height: calc(100vh - 180px);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 50px;
+  padding: 100px 0px 100px 0px;
+}
+
+footer{
+  height: 250px;
+  width: 1200px;
+  max-width: 1200px;
+  display:flex;
+  flex-direction: row;
+  gap: 30px;
+  border-top: 1px solid var(--border-gray);
+}
+
+.footer-left{
+  display:flex;
+  flex: 1;
+  padding-top: 30px;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.footer-right{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0px 30px 0px;
+}
+
+.footer-info{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.site-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+#sobaka{
+  width: 100px;
+}
+
+a{
+  color: var(--active-link) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--active-link-underline);
+  text-underline-offset: 0.25rem;
+  transition: 0.1s ease-in-out;
+  text-decoration-thickness: 1px;
+}
+
+a:hover{
+  color: var(--hover-link) !important;
+  text-decoration-color: var(--hover-link);
+}
+
+h1{
+  color: var(--text-primary);
+  font-family: "PT Sans", serif;
+  font-size: 32px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.subtitle{
+  color: var(--text-secondary);
+  font-family: "PT Sans", serif;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.body-interface-text{
+  color: var(--text-primary);
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  text-align: left;
+}
+
+.heading-interface-text{
+  color: var(--text-primary);
+  font-family: "Roboto Condensed";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  width: auto;
+}
+
+.caption-interface-text{
+  color: var(--text-secondary);
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  line-height: 140%;
+  text-align: left;
+}
+
+.body-serif-text{
+  color: var(--text-primary);
+  font-family: "PT Sans", serif;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: left;
+}
+
+/* ————————————— Homepage ————————————————— */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 70px;
+  column-gap: 70px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.designed {
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.designed-img{
+    height: 220px;
+    width: auto; /* Ширина подстраивается автоматически */
+    display: block; /* Убирает лишние отступы */
+}
+
+.designed-text{
+  max-width: 230px;
+  text-align: center;
+}
+
+/* ——————————————— About page ————————————— */
+
+.about-container{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 0px;
+}
+
+.about-info{
+  max-width: 585px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: start;
+}
+
+.me-container{
+  width: 585px;
+  height: 585px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.me{
+  width: 400px;
+  height: 400px;
+}
+
+.letter-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.letter{
+  color: var(--text-primary);
+  font-family: "PT Sans", serif;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.resume-container{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+
+#resume{
+  height: 100px;
+}
+
+/* —————————————— 404 —————————————— */
+
+.unfound-container{
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.unfound-image{
+  width: 350px;
+  height: auto;
+}
+
+/* —————————————— Designed preview —————————————— */
+
+.project-preview{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start;
+}
+
+.wide-image{
+  width: 100%;
+}
+
+.small-image-group{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.small-image{
+  aspect-ratio: 4 / 3; /* Соотношение сторон */
+  width: calc(50% - 15px); /* Растягиваем по ширине контейнера */
+  height: auto; /* Автоматически подстраивает высоту */
+  object-fit: cover; 
+}
+
+.text-container{
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* ––—————————————————— Media-request —————————————————————— */
+/* Tablets */
+@media (max-width: 1280px) { 
+  /* General */
+  header{
+    width: calc(100vw - 68px);
+  }
+  .content{
+    width: calc(100vw - 68px);
+    padding: 70px 0px 70px 0px;
+  }
+  footer{
+    width: calc(100vw - 68px);
+  }
+  /* About */
+  .about-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-info{
+    width: 688px;
+    align-items: center;
+  }
+  .me-container{
+    width: 100%;
+    height: max-content;
+  }
+  .me{
+    width: 300px;
+    height: 300px;
+  }
+  .letter{
+    text-align: center;
+    font-size: 20px;
+  }
+  /* Design preview */
+  .project-preview{
+    gap: 30px;
+  }
+
+  .small-image-group{
+    gap: 10px;
+  }
+  .small-image{
+    width: calc(50% - 5px); /* Растягиваем по ширине контейнера */
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  /* General */
+  header{
+    width: calc(100vw - 20px);
+    height: 60px;
+  }
+  .content{
+    width: calc(100vw - 20px);
+    padding: 40px 0px 40px 0px;
+  }
+  footer{
+    width: calc(100vw - 20px);
+    height: 220px;
+  }
+  .site-logo{
+    gap: 6px;
+  }
+  .site-logo img{
+    width: 33px;
+    height: 33px;
+  }
+  #sobaka{
+    width: 62px;
+  }
+  h1{
+    font-size: 26px;
+  }
+  .subtitle{
+    font-size: 18px;
+  }
+  .body-interface-text{
+    font-size: 14px;
+  }
+  .heading-interface-text{
+    font-size: 16px;
+  }
+  .caption-interface-text{
+    font-size: 12px;
+  }
+  .body-serif-text{
+    font-size: 14px;
+  }
+  /* Homepage */
+  .galery{
+    gap: 20px;
+  }
+  /* About */
+  .about-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 100%;
+  }
+  .about-info{
+    max-width: 100%;
+    gap: 30px;
+  }
+  .me{
+    width: 226px;
+    height: 226px;
+  }
+  .letter-container{
+    max-width: 100%;
+  }
+  .letter{
+    font-size: clamp(100%, 4vw, 20px);
+  }
+  .resume-container{
+    gap: 15px;
+  }
+  #resume{
+    height: 80px;
+  }
+  /* 404 */
+  .unfound-container{
+    gap: 30px;
+  }
+  
+  .unfound-image{
+    width: 250px;
+    height: auto;
+  }
+  /* Designed preview */
+  .project-preview{
+    gap: 20px;
+  }
+}
