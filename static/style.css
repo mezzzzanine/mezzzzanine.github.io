@@ -304,7 +304,6 @@ h1{
 /* —————————————— 404 —————————————— */
 
 .unfound-container{
-  padding-top: 20vh;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -328,6 +327,7 @@ h1{
 
 .wide-image{
   width: 100%;
+  border-radius: 4px;
 }
 
 .small-image-group{
@@ -341,7 +341,8 @@ h1{
   aspect-ratio: 4 / 3; /* Соотношение сторон */
   width: calc(50% - 15px); /* Растягиваем по ширине контейнера */
   height: auto; /* Автоматически подстраивает высоту */
-  object-fit: cover; 
+  object-fit: cover;
+  border-radius: 4px; 
 }
 
 .text-container{
@@ -390,7 +391,7 @@ h1{
   .project-preview{
     gap: 30px;
   }
-
+  
   .small-image-group{
     gap: 10px;
   }
@@ -485,5 +486,11 @@ h1{
   /* Designed preview */
   .project-preview{
     gap: 20px;
+  }
+  .wide-image{
+    border-radius: 2px;
+  }
+  .small-image{
+    border-radius: 2px;
   }
 }
