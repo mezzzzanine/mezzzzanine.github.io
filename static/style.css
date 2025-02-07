@@ -321,7 +321,7 @@ h1{
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   align-items: start;
 }
 
@@ -389,7 +389,7 @@ h1{
   }
   /* Design preview */
   .project-preview{
-    gap: 30px;
+    gap: 10px;
   }
   
   .small-image-group{
@@ -485,7 +485,7 @@ h1{
   }
   /* Designed preview */
   .project-preview{
-    gap: 20px;
+    gap: 10px;
   }
   .wide-image{
     border-radius: 2px;
