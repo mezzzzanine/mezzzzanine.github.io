@@ -350,6 +350,7 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin: 30px 0px 30px 0px;
 }
 
 /* ––—————————————————— Media-request —————————————————————— */
@@ -397,6 +398,10 @@ h1{
   }
   .small-image{
     width: calc(50% - 5px); /* Растягиваем по ширине контейнера */
+  }
+
+  .text-container{
+    margin: 20px 0px 20px 0px;
   }
 }
 
@@ -492,5 +497,8 @@ h1{
   }
   .small-image{
     border-radius: 2px;
+  }
+  .text-container{
+    margin: 10px 0px 10px 0px;
   }
 }
