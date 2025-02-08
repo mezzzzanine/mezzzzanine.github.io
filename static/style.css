@@ -321,7 +321,7 @@ h1{
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -334,7 +334,7 @@ h1{
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
 }
 
 .small-image{
@@ -350,7 +350,6 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 30px 0px 30px 0px;
 }
 
 /* ––—————————————————— Media-request —————————————————————— */
@@ -390,18 +389,15 @@ h1{
   }
   /* Design preview */
   .project-preview{
-    gap: 10px;
+    gap: 30px;
   }
   
   .small-image-group{
-    gap: 10px;
+    gap: 20px;
   }
+  
   .small-image{
-    width: calc(50% - 5px); /* Растягиваем по ширине контейнера */
-  }
-
-  .text-container{
-    margin: 20px 0px 20px 0px;
+    width: calc(50% - 10px); /* Растягиваем по ширине контейнера */
   }
 }
 
@@ -490,15 +486,16 @@ h1{
   }
   /* Designed preview */
   .project-preview{
-    gap: 10px;
+    gap: 20px;
   }
   .wide-image{
     border-radius: 2px;
   }
-  .small-image{
-    border-radius: 2px;
+  .small-image-group{
+    gap: 10px;
   }
-  .text-container{
-    margin: 10px 0px 10px 0px;
+  .small-image{
+    width: calc(50% - 5px); /* Растягиваем по ширине контейнера */
+    border-radius: 2px;
   }
 }
