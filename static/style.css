@@ -92,6 +92,11 @@ header {
   border-bottom: 1px solid var(--border-gray);
 }
 
+header img{
+  width: 44px;
+  height: 44px;
+}
+
 .content {
   width: 1200px;
   min-height: calc(100vh - 180px);
