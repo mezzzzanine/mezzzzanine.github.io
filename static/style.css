@@ -170,7 +170,7 @@ a:hover{
   transition: 0.1s ease-in-out;
 }
 
-.site-logo img:hover{
+.site-logo:hover img{
   filter: invert(100%);
 }
 
