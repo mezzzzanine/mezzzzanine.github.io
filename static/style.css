@@ -166,6 +166,14 @@ a:hover{
   text-decoration-color: var(--hover-link);
 }
 
+.site-logo img{
+  transition: 0.1s ease-in-out;
+}
+
+.site-logo img:hover{
+  filter: invert(100%);
+}
+
 h1{
   color: var(--text-primary);
   font-family: "PT Sans", serif;
@@ -386,7 +394,6 @@ h1{
   }
   .me{
     width: 300px;
-    height: 300px;
   }
   .letter{
     text-align: center;
@@ -466,7 +473,6 @@ h1{
   }
   .me{
     width: 226px;
-    height: 226px;
   }
   .letter-container{
     max-width: 100%;
