@@ -231,46 +231,16 @@ h1{
   gap: 15px;
 }
 
-/* .galery {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 70px;
-  column-gap: 70px;
-  justify-content: center;
-  align-items: flex-start;
-}
-.designed {
-  min-width: 230px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-
-.designed-img{
-    height: 220px;
-    width: auto; 
-    display: block;
-}
-
-.designed-text{
-  max-width: 230px;
-  text-align: center;
-} */
-
-
 /* Контейнер галереи */
 .galery {
   columns: 240px; /* Минимальная ширина колонок для десктопа */
-  column-gap: 30px; /* Отступы между колонками */
-  max-width: 1200px; /* Ограничиваем ширину */
-  margin: 0 auto; /* Центрируем */
+  column-gap: 80px; /* Отступы между колонками */
 }
 
 /* Карточка */
 .designed {
   break-inside: avoid; /* Предотвращаем разрыв карточки между колонками */
-  margin-bottom: 30px; /* Вертикальный отступ между карточками */
+  margin-bottom: 70px; /* Вертикальный отступ между карточками */
   display: flex;
   flex-direction: column;
   gap: 12px; /* Расстояние между фото/видео и текстом */
@@ -400,10 +370,6 @@ h1{
 /* ––—————————————————— Media-request —————————————————————— */
 /* Tablets */
 @media (max-width: 1280px) {
-  .galery {
-    columns: 209px; /* Минимальная ширина для 3 колонок */
-    column-gap: 30px;
-  }
   /* General */
   header{
     width: calc(100vw - 68px);
@@ -414,6 +380,14 @@ h1{
   }
   footer{
     width: calc(100vw - 68px);
+  }
+  /* Homepage */
+  .galery {
+    columns: 209px; /* Минимальная ширина для 3 колонок */
+    column-gap: 20px;
+  }
+  .designed {
+    margin-bottom: 50px;
   }
   /* About */
   .about-container{
@@ -451,10 +425,6 @@ h1{
 
 /* Phones */
 @media (max-width: 768px) {
-  .galery {
-    columns: 142px; /* Минимальная ширина для 2 колонок */
-    column-gap: 16px; /* Уменьшаем отступы */
-  }
   /* General */
   header{
     width: calc(100vw - 20px);
@@ -497,8 +467,9 @@ h1{
     font-size: 14px;
   }
   /* Homepage */
-  .galery{
-    gap: 20px;
+  .galery {
+    columns: 142px; /* Минимальная ширина для 2 колонок */
+    column-gap: 16px; /* Уменьшаем отступы */
   }
   /* About */
   .about-container{
