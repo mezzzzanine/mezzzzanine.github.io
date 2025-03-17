@@ -231,7 +231,7 @@ h1{
   gap: 15px;
 }
 
-.galery {
+/* .galery {
   display: flex;
   flex-wrap: wrap;
   row-gap: 70px;
@@ -249,13 +249,45 @@ h1{
 
 .designed-img{
     height: 220px;
-    width: auto; /* Ширина подстраивается автоматически */
-    display: block; /* Убирает лишние отступы */
+    width: auto; 
+    display: block;
 }
 
 .designed-text{
   max-width: 230px;
   text-align: center;
+} */
+
+
+/* Контейнер галереи */
+.galery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Минимум 240px, растягивается равномерно */
+  gap: 30px; /* Отступы между карточками */
+  max-width: 1200px; /* Ограничиваем ширину для десктопа */
+  margin: 0 auto; /* Центрируем */
+  padding: 0 34px; /* Боковые отступы */
+}
+
+/* Карточка */
+.designed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Расстояние между фото/видео и текстом */
+  align-items: flex-start; /* Выравнивание по левому краю */
+}
+
+/* Фото и видео */
+.designed-img {
+  width: 100%; /* По ширине карточки */
+  height: auto; /* Сохраняем пропорции */
+  display: block;
+}
+
+/* Текст */
+.designed-text {
+  width: 100%; /* По ширине карточки */
+  text-align: left; /* Выравнивание по левому краю */
 }
 
 /* ——————————————— About page ————————————— */
@@ -367,7 +399,12 @@ h1{
 
 /* ––—————————————————— Media-request —————————————————————— */
 /* Tablets */
-@media (max-width: 1280px) { 
+@media (max-width: 1280px) {
+  .galery {
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    gap: 30px;
+    padding: 0 34px;
+  }
   /* General */
   header{
     width: calc(100vw - 68px);
@@ -415,6 +452,11 @@ h1{
 
 /* Phones */
 @media (max-width: 768px) {
+  .galery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
   /* General */
   header{
     width: calc(100vw - 20px);
