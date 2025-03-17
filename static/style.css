@@ -261,16 +261,16 @@ h1{
 
 /* Контейнер галереи */
 .galery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Минимум 240px, растягивается равномерно */
-  gap: 30px; /* Отступы между карточками */
-  max-width: 1200px; /* Ограничиваем ширину для десктопа */
+  columns: 240px; /* Минимальная ширина колонок для десктопа */
+  column-gap: 30px; /* Отступы между колонками */
+  max-width: 1200px; /* Ограничиваем ширину */
   margin: 0 auto; /* Центрируем */
-  padding: 0 34px; /* Боковые отступы */
 }
 
 /* Карточка */
 .designed {
+  break-inside: avoid; /* Предотвращаем разрыв карточки между колонками */
+  margin-bottom: 30px; /* Вертикальный отступ между карточками */
   display: flex;
   flex-direction: column;
   gap: 12px; /* Расстояние между фото/видео и текстом */
@@ -401,9 +401,8 @@ h1{
 /* Tablets */
 @media (max-width: 1280px) {
   .galery {
-    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
-    gap: 30px;
-    padding: 0 34px;
+    columns: 209px; /* Минимальная ширина для 3 колонок */
+    column-gap: 30px;
   }
   /* General */
   header{
@@ -453,9 +452,8 @@ h1{
 /* Phones */
 @media (max-width: 768px) {
   .galery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 0 10px;
+    columns: 142px; /* Минимальная ширина для 2 колонок */
+    column-gap: 16px; /* Уменьшаем отступы */
   }
   /* General */
   header{
